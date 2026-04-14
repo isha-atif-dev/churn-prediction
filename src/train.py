@@ -10,7 +10,7 @@ y_test = pd.read_csv("data/processed/y_test.csv")
 
 
 # creating the model
-model = RandomForestClassifier()
+model = RandomForestClassifier(class_weight='balanced')
 
 # fit the training data
 model.fit(X_train,y_train)
